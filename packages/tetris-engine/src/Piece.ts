@@ -14,6 +14,18 @@ export class Piece {
     this.shape = shape;
   }
 
+  public moveLeft(): void {
+    this.position.x -= 1;
+  }
+
+  public moveRight(): void {
+    this.position.x += 1;
+  }
+
+  public moveDown(): void {
+    this.position.y += 1;
+  }
+
   public rotateRight(): void {
     const rotated = [];
     for (let j = 0; j < this.shape[0].length; j++) {
